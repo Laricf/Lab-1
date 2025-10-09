@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nest start"
-  },
+  "build": "tsc",
+  "start": "node dist/main.js",
+  "start:dev": "nest start --watch"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
