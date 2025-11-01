@@ -5,11 +5,22 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "useDefineForClassFields": false,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./",               
+    "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["libs/domain/*"],
+      "@infra/*": ["libs/infra/*"],
+      "@use-cases/*": ["libs/use-cases/*"],
+      "@interface/*": ["libs/interface/*"]
+    }
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*",
+    "libs/**/*"                    
+  ]
 }

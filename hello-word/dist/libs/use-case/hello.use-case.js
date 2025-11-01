@@ -6,14 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.HelloUseCase = void 0;
 const common_1 = require("@nestjs/common");
-const users_controller_1 = require("../src/interface/users/users.controller");
-let AppModule = class AppModule {
+const hello_entity_1 = require("../domain/hello.entity");
+let HelloUseCase = class HelloUseCase {
+    execute() {
+        return new hello_entity_1.HelloEntity('Olá terraquios!');
+    }
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
-    (0, common_1.Module)({
-        controllers: [users_controller_1.UsersController],
-    })
-], AppModule);
+exports.HelloUseCase = HelloUseCase;
+exports.HelloUseCase = HelloUseCase = __decorate([
+    (0, common_1.Injectable)()
+], HelloUseCase);
